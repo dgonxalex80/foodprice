@@ -1,5 +1,7 @@
 # 10-Cargar-base-datos.R     Datos_simulacion.xls -> data0.RDS
+
 library(here)
+source(here::here("R","10-Cargar-librerias.R"))
 
 data0 <- read_excel("data/Datos_simulación.xlsx", sheet = "data")
 requ0 <- read_excel("data/Datos_simulación.xlsx", sheet = "restricciones")
