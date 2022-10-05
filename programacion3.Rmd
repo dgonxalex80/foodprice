@@ -1,0 +1,43 @@
+---
+title: "Dieta 1"
+description: |
+  Metodología para la construcció de la dieta 1 : dieta de requerimientos calóricos mínimos.
+author:
+  - name: Grupo Javeriana Cali
+    url: 
+    affiliation: Pontificia Universidad Javeriana Cali 
+    affiliation_url: https://www.javerianacali.edu.co/
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(readr)
+base_ago22 <- read_delim("data/base_ago22.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)
+base_cali_ago22 =base_ago22[base_ago22$Mercado==""]
+```
+
+
+# Introducción
+
+# Tenología usada
+
+
+
+# Definición del problema
+
+Definición de las variables
+Definición de la función objetivo
+Definición de restricciones
+Planteamiento del problema - código R
+
+# Solución
+
+# Conclusiones
+
+# Referencias
+
+
+
+

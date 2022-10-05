@@ -1,0 +1,77 @@
+---
+title: "About This Website"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+# install.packages("lpSolve")
+# install.packages("lpSolveAPI")
+library(lpSolve)
+library(readr)
+library(lpSolveAPI)
+library(tidyverse)
+
+# colores
+c0= "#b0394a"
+c1= "#ad6395"
+c2= "#a391c4"
+c3= "#8acfe6"
+c4= "#646420"
+c5= "#db524f"
+```
+
+
+
+
+### Problema de programación lineal
+#### Ejercicio dieta más económica
+
+```{r, warning=FALSE, message=FALSE}
+
+precios <- read_delim("data/precios.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)
+composicion <- read_delim("data/composicion.csv", delim = ";", escape_double = FALSE, trim_ws = TRUE)
+data=cbind(composicion, precios[,2])
+head(data)
+```
+
+```{r}
+
+# Nombre de alimentos
+lbs_alimentos = composicion[,1]
+
+
+# Funcion objetivo
+#   CoD = min (6*huev + 4*frij + 1.5*tort + 1*espin  
+Objetivo <- c(6,4,1.5,1)
+
+# Restricciones - combinaciones lineales : Matrix A
+#                             huev  frij  tort  espin                              
+Coef_Restricciones <-matrix(c(24.4,   0,  141,   4.1,     # >= 186
+                              442,   71,  5.7,   81,    # >= 2500
+                              218,  2.5,  100,   2.5),    # >= 20
+                             nrow = 3, 
+                             ncol = 4, 
+                             byrow = TRUE)
+Coef_Restricciones 
+
+#  Limites de las restricciones : Vector B
+Sol_Restricciones <- c(186, 2500, 20)
+Sol_Restricciones 
+
+# Direccion delas restricciones
+Dir_Restricciones <- c(">=", ">=", ">=")
+Dir_Restricciones 
+
+# Solucion del problema
+Solucion <- lp(direction = "min", 
+               objective.in = Objetivo, 
+               const.mat = Coef_Restricciones, 
+               const.dir = Dir_Restricciones, 
+               const.rhs = Sol_Restricciones)
+
+Sol<-c(Solucion$objval, Solucion$solution)
+Sol
+
+
+```
+

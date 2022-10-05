@@ -1,0 +1,160 @@
+```{r reprex-options, include = FALSE}
+options(
+  keep.source = TRUE,
+  rlang_backtrace_on_error_report = "full",
+  crayon.enabled = FALSE,
+  reprex.current_venue = "gh"
+)
+```
+
+```{r, results = 'asis', echo = FALSE, include = file.exists('.Rprofile'), eval = file.exists('.Rprofile')}
+cat(sprintf("*Local `.Rprofile` detected at `%s`*", normalizePath(".Rprofile")))
+```
+
+---
+output: reprex::reprex_document
+knit: reprex::reprex_render
+---
+
+# Problema
+
+Una empresa produce dos modelos de sillas: 4P y 3P. El modelo 4P necesita 4 patas, 1 asiento y 1 respaldo. En cambio, el modelo 3P necesita 3 patas y 1 asiento. La empresa dispone de un stock inicial de 200 patas, 500 asientos y 100 respaldos. Si la empresa necesita más patas, asientos y respaldos, puede comprar bloques de madera estándar, cuyo costo es de 80 euros por bloque. La empresa puede producir 10 asientos, 20 patas y 2 respaldos a partir de un bloque de madera estándar. El coste de producción del modelo 4P es de 30 euros/silla, mientras que el coste del modelo 3P es de 40 euros/silla. Finalmente, la empresa informa que el número mínimo de sillas a producir es de 1000 unidades por mes. Defina un modelo de programación lineal, que minimice el costo total (los costos de producción de las dos sillas, más la compra de nuevos bloques de madera).
+
+
+# Definición del problema
+
+Primero, necesitamos traducir el problema de una manera matemática. Definamos las siguientes variables
+
+$x_{4p}$ es el número de sillas 4P que se producirán.
+$x_{3p}$ es el número de sillas 3P que se producirán.
+$x_w$ es el número de bloques de madera a comprar.
+Ahora podemos definir $\hat X = \begin{pmatrix} x_{4p} \\ x_{3p} \\ x_w \end{pmatrix}$ como el vector de la variable de decisión. Tenga en cuenta que debe ser $\hat X \geq 0$.
+
+Nos gustaría minimizar el costo total, por lo que debemos establecer nuestra función objetivo de la siguiente manera
+
+$$costo(x_{4p}, x_{3p}, x_w) = 30 x_{4p} + 40 x_{3p} + 80 x_w = MIN(costo) $$
+
+lo que significa que $\hat C = \begin{pmatrix} 30 \\ 40 \\ 80 \end{pmatrix}$.
+
+Las restricciones se pueden establecer de la siguiente manera
+
+Para los asientos $$ x_{4p} + x_{3p} \leq 500 + 10 x_w $$
+Para las piernas $$ 4 x_{4p} + 3 x_{3p} \leq 200 + 20 x_w $$
+Para las espaldas $$ x_{4p} \leq 100 + 2 x_w $$
+Número mínimo de sillas producidas $$ x_{4p} + x_{3p} \geq 1000 $$
+Ahora podemos definir la matriz de coeficientes $A = \begin{pmatrix} 1 & 1 & -10 & \\ 4 & 3 & -20 & \\ 1 & 0 & -2 & \\ – 1 & – 1 & 0 & \end{pmatrix} $ y $B = \begin{pmatrix} 500 \\ 200 \\ 100 \\ -1000 \end{pmatrix}$.
+
+
+
+# Implementación y solución de R
+
+Ahora estamos listos para implementar esto en R. Hay muchos paquetes diferentes que pueden resolver este tipo de problemas, pero mis favoritos son lpSolve y lpSolveAPI, que es un tipo de API construida sobre lpSolve . Usaré ambos.
+
+Una buena característica del paquete lpSolve es que puede especificar la dirección de las restricciones. Efectivamente en nuestro caso la última restricción de número mínimo de sillas producidas no encaja con la definición matemática del problema que dimos en el párrafo anterior. Aquí podemos cambiar los signos (y por lo tanto la dirección de la desigualdad) o especificar la dirección de la desigualdad en lpSolve . Lo haré de esta segunda manera.
+
+Podemos establecer que todas las variables sean números enteros configurando el argumento “all.int=TRUE” en la función lpSolve::lp . Por supuesto, lpSolve puede trabajar con números enteros y reales.
+
+También es particularmente importante verificar el estado al final de la ejecución: si es 0, entonces se ha encontrado una solución, pero si es 2, significa que no hay una solución factible.
+
+
+
+```{r}
+# Load lpSolve
+require(lpSolve)
+
+## Set the coefficients of the decision variables -> C
+C <- c(30, 40, 80)
+
+# Create constraint martix B
+A <- matrix(c(1, 1, -10,
+              4, 3, -20,
+              1, 0, -2,
+              1, 1, 0), nrow=4, byrow=TRUE)
+
+# Right hand side for the constraints
+B <- c(500, 200, 100, 1000)
+
+# Direction of the constraints
+constranints_direction  <- c("<=", "<=", "<=", ">=")
+
+# Find the optimal solution
+optimum <-  lp(direction="min",
+               objective.in = C,
+               const.mat = A,
+               const.dir = constranints_direction,
+               const.rhs = B,
+               all.int = T)
+
+# Print status: 0 = success, 2 = no feasible solution
+print(optimum$status)
+
+# Display the optimum values for x_4p, x_3p and x_w
+best_sol <- optimum$solution
+names(best_sol) <- c("x_4p", "x_3p", "x_w") 
+print(best_sol)
+
+# Check the value of objective function at optimal point
+print(paste("Total cost: ", optimum$objval, sep=""))
+
+#################
+#   Output      #
+#################
+
+# [1] 0
+# x_4p x_3p  x_w 
+# 420  580  161 
+
+# "Total cost: 48680"
+
+rm(optimum, constranints_direction, best_sol)
+
+#-------------------------------------------------------------------------------
+# Let's try to solve the problem again using lpSolveAPI
+
+# Use lpSolveAPI
+require(lpSolveAPI)
+
+# Set 4 constraints and 3 decision variables
+lprec <- make.lp(nrow = 4, ncol = 3)
+# Set the type of problem we are trying to solve
+lp.control(lprec, sense="min")
+# Set type of decision variables
+set.type(lprec, 1:3, type=c("integer"))
+
+# Set objective function coefficients vector C
+set.objfn(lprec, C)
+
+# Add constraints
+add.constraint(lprec, A[1, ], "<=", B[1])
+add.constraint(lprec, A[2, ], "<=", B[2])
+add.constraint(lprec, A[3, ], "<=", B[3])
+add.constraint(lprec, A[4, ], ">=", B[4])
+
+# Display the LPsolve matrix
+lprec
+
+# Solve problem
+solve(lprec)
+
+# Get the decision variables values
+get.variables(lprec)
+# Get the value of the objective function
+get.objective(lprec)
+
+# Note that the default boundaries on the decision variable are c(0, 0, 0) and c(Inf, Inf, Inf)
+get.bounds(lprec)
+
+# Boundaries can be set with following function
+#lpSolveAPI::set.bounds()
+
+#################
+#   Output      #
+#################
+
+# [1] 420 580 161
+# [1] 48680
+```
+
+Referencia : https://www.r-bloggers.com/2018/08/linear-programming-in-r-2/
+
+<sup>Created on `r Sys.Date()` with [reprex v`r utils::packageVersion("reprex")`](https://reprex.tidyverse.org)</sup>

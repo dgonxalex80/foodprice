@@ -1,0 +1,87 @@
+Cod_TCAC;Alimento;Serving;Alimento_TCAC;Precio_100g_ajust;Energia (Kcal);Proteina (g);Carbohidratos Totales (g);Lipidos (g);Calcio (mg);Zinc (mg);Hierro (mg);Magnesio (mg);Fosforo (mg);Vitamina C (mg);Tiamina (mg);Riboflavina (mg);Niacina (mg);Folatos (mcg);Vitamina B12 (mcg);Vitamina A (ER);Sodio (mg)
+A010;Arroz de primera;100;Arroz blanco, pulido, crudo;335,7;353;6,7;80,1;0,4;9;1,2;0,8;35;140;0;0,07;0,03;1,8;9;0;0;2
+A012;Avena en hojuelas;100;Avena en Hojuelas, Precocida;1052,4;411;16,9;64,1;7,5;54;4;4,5;155;320;0;0,72;0,13;1,6;57;0;0;3
+A027;Galletas saladas;100;Galletas saladas, tipo soda;1390,9;424;9,6;72,9;9,7;38;0,7;5,6;23;145;0;0,12;0,37;6,2;134;0,06;1;944
+A029;Avena molida;100;Harina de avena, cruda;1052,4;414;14,7;66,2;8,6;54;3,2;4;132;440;0;0,63;0,13;1,5;32;0;0;19
+A034;Harina precocida de maíz;100;Harina de maíz blanco, precocida;440,3;380;9,1;73,9;3,7;4;1,3;2,7;44;248;0;0,3;0,12;2,7;35;0;0;1
+A040;Harina de trigo;100;Harina de trigo, fortificada, todo propósito, cruda;422;360;12,5;72,3;1,7;15;1;4,3;26;107;0;0,98;0,47;6,1;216;0;0;2
+A043;Chócolo mazorca;100;Maíz amarillo, crudo;112,5;393;9,4;74,5;4,7;7;2,2;2,7;127;213;0;0,38;0,2;3,6;19;0;34;35
+A072;Pastas alimenticias;100;Pasta alimenticia, enriquecida, cruda;702,8;371;13;74,7;1,5;25;1,3;3,9;53;120;0;0,95;0,39;7,1;237;0;0;6
+B006;Ahuyama;100;Ahuyama, cruda;140,892;30;0,8;5,8;0,2;20;0,2;0,8;12;34;9;0,05;0,05;0,6;16;0;1775;1
+B014;Apio;100;Apio, crudo;281,2;26;0,7;4,6;0,2;42;0,2;0,4;14;33;5;0,04;0,04;0,3;36;0;22;80
+B019;Arveja verde en vaina pastusa;100;Arveja verde, cruda;1200;99;5,9;15,5;0,3;36;1,2;1,5;33;110;33;0,36;0,12;2,2;65;0;51;5
+B025;Brócoli;100;Brócoli, crudo;775;46;3;6,6;0,3;60;0,4;1,1;21;70;89;0,07;0,14;0,9;63;0;31;33
+B027;Cebolla cabezona blanca bogotana;100;Cebolla cabezona, cruda;178,08;40;1,4;7,7;0,1;24;0,2;0,3;7;40;10;0,04;0,03;0,2;18;0;1;4
+B029;Cebolla junca Aquitania;100;Cebolla junca, tallos, cruda;544,5;37;1,2;6,8;0,1;57;0,2;0,5;17;31;13;0,04;0,05;0,3;26;0;200;15
+B029;Cebolla junca Tenerife;100;Cebolla junca, tallos, cruda;637;37;1,2;6,8;0,1;57;0,2;0,5;17;31;13;0,04;0,05;0,3;26;0;200;15
+B039;Coliflor;100;Coliflor, crudo;439,625;36;1,9;5,7;0,1;25;0,3;0,7;12;57;55;0,03;0,08;0,5;57;0;15;41
+B052;Habichuela;100;Habichuela, cruda;435,897;43;2,1;7,2;0;40;0,2;1;22;39;10;0,06;0,1;0,7;34;0;33;6
+B059;Lechuga Batavia;100;Lechuga común, cruda;248,066;18;0,8;2,6;0,1;21;0,3;0,9;6;27;3;0,06;0,04;0,4;53;0;10;6
+B074;Papa parda pastusa;100;Papa, variedad harinosa, pastusa, con cáscara, cruda;126,1;89;2,1;18,9;0,1;12;0,3;0,8;23;57;20;0,08;0,03;1,1;16;0;0;6
+B077;Pepino cohombro;100;Pepino Cohombro, crudo;135,926;14;0,5;2,3;0,1;18;0,1;0,3;12;22;8;0,02;0,02;0,1;14;0;2;2
+B080;Pimentón;100;Pimentón rojo, crudo;525,808;35;1;6,3;0,3;7;0,2;0,4;12;24;160;0,05;0,07;1,1;35;0;184;2
+B098;Remolacha bogotana;100;Remolacha, sin cáscara, cruda;297,625;53;1,4;10,3;0,1;16;0,4;0,8;23;40;6;0,03;0,04;0,3;109;0;2;71
+B103;Tomate chonto;100;Tomate, crudo;423,5;23;0,9;4,1;0,1;9;0,1;0,5;10;24;20;0,05;0,05;0,6;23;0;62;6
+B107;Yuca ICA;100;Yuca blanca, sin cáscara, cruda;349,875;159;0,9;37,4;0,3;16;0,3;0,3;21;30;30;0,04;0,03;0,8;27;0;1;14
+B110;Zanahoria;100;Zanahoria, sin cáscara, cruda;255,234;47;0,7;9,5;0,1;27;0,2;0,4;10;35;3;0,04;0,04;0,4;22;0;1318;35
+C002;Aguacate papelillo;100;Aguacate Lorena, crudo;698,36;179;1,6;10;13,3;10;0,5;0,4;27;40;8;0,05;0,12;1,4;81;0;3;6
+C010;Banano criollo;100;Banano común, crudo;202,631;101;1,5;22,3;0,1;8;0,2;0,9;29;27;19;0,05;0,03;0,6;21;0;22;3
+C019;Coco;100;Coco, crudo;576,09;402;3,6;12,6;35,5;7;0,8;1,3;40;80;5;0,05;0,02;0,5;26;0;0;18
+C025;Fresa;100;Fresa, madura, cruda;519,435;45;0,8;8,3;0,5;21;0,2;0,5;13;26;67;0,03;0,03;0,4;22;0;4;2
+C028;Granadilla;100;Granadilla, cruda;2629,368;95;2,1;14,9;1,6;12;0,8;0,9;25;50;0;0,02;0,35;2,1;14;0;28;20
+C030;Guanábana;100;Guanábana, cruda;501,644;33;0,6;6,8;0,2;11;15,7;0,2;5;12;0;0,03;0,06;1,1;14;0;1;9
+C042;Kiwi;100;Kiwi, crudo;1060,95;73;1;15;0,4;30;0,1;0,4;16;34;80;0,03;0,03;0,4;25;0;18;3
+C044;Limón común;100;Limón, crudo;427,8;44;0,3;9,3;0,3;19;0,1;0,5;8;15;42;0,05;0,01;0,1;11;0;1;4
+C045;Lulo;100;Lulo, crudo;830,157;48;0,9;8,9;0,1;10;0,1;0,6;19;15;20;0,04;0,04;0,1;7;0;37;0
+C050;Mandarina Arrayana;100;Mandarina, cruda;282,711;54;0,9;11,4;0,1;35;0,2;0,3;12;21;24;0,06;0,03;0,2;18;0;35;2
+C051;Mango común;100;Mango común, crudo;375;79;0,6;17,1;0;15;0,1;0,5;24;21;48;0,12;0,12;0,5;39;0;140;4
+C056;Maracuyá;100;Maracuyá, cruda;1046,359;60;1,5;12,4;0,5;9;0,1;1,7;25;21;20;0,01;0,17;0,8;8;0;173;6
+C060;Melón Cantalup;100;Melón, crudo;586,2;25;0,7;5;0;11;0,1;0,4;7;17;0;0,04;0,02;0,6;21;0;68;7
+C061;Mora de Castilla;100;Mora de castilla, cruda;533,355;74;1;14,6;0,1;42;0,5;1,7;20;10;18;0,22;0,05;0,9;25;0;0;1
+C062;Naranja Sweet;100;Naranja, cruda;267,033;41;0,7;8,8;0,3;33;0,5;1,3;213;20;27;0,35;0,16;0,2;30;0;2;2
+C071;Pera importada;100;Pera, cruda;700,094;63;0,3;12,9;0,2;8;0,1;0,4;5;9;2;0,07;0,04;0,2;7;0;0;1
+C072;Piña gold;100;Piña, cruda;274,82;56;0,6;12,4;0,1;16;0,2;0,5;12;9;23;0,06;0,05;0,3;16;0;8;3
+C079;Patilla;100;Sandía, cruda;468,25;17;0,4;3,7;0;4;0,1;0,3;10;5;7;0,02;0,01;0,1;3;0;30;1
+C086;Uva Isabela;100;Uva Isabella, cruda;372,627;51;0,4;12,1;0;8;0,1;0,4;4;10;14;0,03;0,01;0,1;27;0;7;9
+D013;Aceite vegetal mezcla;100;Aceite, mezcla vegetal;1167,39130434783;900;0;0;100;0;0;0;0;1;0;0;0;0;0;0;0;0
+D018;Margarina;100;Margarina, con sal;2291,7;732;0,6;0;81,1;14;0;0;2;14;0;0,01;0,04;0;1;0,1;819;877
+D020;Mayonesa doy pack;100;Mayonesa, con sal;1263,9;326;0,9;5,4;33,4;14;0,2;0,2;1;26;0;0,01;0,04;0;6;0,24;84;711
+E001;Almejas con concha;100;Almeja, de agua dule, cruda;6969,303;66;14;0,3;1;43;1,3;1,7;19;170;2;0,08;0,14;1,3;16;11,28;90;46
+E003;Lomitos de atún en lata;100;Atún, enlatado en aceite;2761,4;211;25,5;0;12,1;8;0,5;1,5;34;250;0;0,02;0,08;12,3;5;2,2;5;391
+E006;Bagre rayado entero congelado;100;Bagre, magro, entero, cocido, sin sal;4560;138;18,2;0;7,2;15;0,6;0,5;24;200;0;0,04;0,08;2,3;12;2;1;101
+E015;Calamar blanco entero;100;Calamar, crudo;2031,744;79;16,4;0,1;1,5;32;1,5;0,7;33;148;0;0,02;0,41;2,2;5;1,3;10;44
+E017;Camarón tigre precocido seco;100;Camarón, crudo;3275;94;20,3;0,5;1,2;82;1,3;2,5;36;196;0;0,03;0,02;2,2;12;1,24;54;163
+E021;Corvina, filete congelado nacional;100;Corvina, de mar, filete, crudo;7539,948;100;17,8;0;3,2;15;0,4;0,4;40;208;0;0,08;0,09;4,2;15;2,5;18;56
+E030;Merluza, filete nacional;100;Merluza, filete, crudo;4066,7;85;18,3;0,1;1,3;27;0,3;0,8;24;186;0;0,06;0,07;1,3;12;1,2;17;75
+E038;Salmón, filete congelado;100;Salmón, filete, crudo;4891,7;181;20,2;0,3;11;17;0,5;0,4;27;250;0;0,21;0,13;7,6;26;3,84;13;49
+E039;Sardinas en lata;100;Sardinas, enlatadas en aceite;1423,6;225;24,6;0;14,1;350;1,6;2,9;40;430;0;0,08;0,29;6,7;8;8,94;28;450
+E043;Tilapia roja entera congelada;100;Tilapia o mojarra, entera, cruda;2495,5;96;20,1;0;1,7;10;0,3;0,6;27;170;0;0,04;0,06;3,9;24;1,59;0;52
+E047;Trucha en corte mariposa;100;Trucha, entera, cruda;3744;135;19,9;0;6,2;34;0,7;0,3;25;227;0;0,17;0,1;4,8;9;5,2;14;52
+F008;Carne de cerdo, brazo sin hueso;100;Cerdo, brazo, crudo;1517,5;115;20,3;0;3,8;10;2,4;0,5;20;203;0;0,92;0,29;6,9;3;0,61;2;87
+F015;Carne de cerdo, costilla;100;Cerdo, costilla, cruda;2072,72;277;18,7;0;22,5;11;1,8;1;20;180;0;0,62;0,26;5,1;4;0,87;5;93
+F019;Carne de cerdo, lomo sin hueso;100;Cerdo, lomo, crudo;1795,6;110;21,6;0,3;2,5;10;1,9;0,9;27;216;0;0,95;0,34;7,1;0;0,51;0;53
+F025;Carne de cerdo, pernil sin hueso;100;Cerdo, Pierna o pernil, cruda;1651,3;131;20,5;0,2;5,4;8;2,5;1,2;23;217;0;0,8;0,24;5,7;5;1;0;57
+F029;Carne de cerdo, tocino papada;100;Cerdo, tocino, crudo;1276,9;784;2,9;0;85,8;6;0,8;1,1;4;37;0;0,23;0,17;2,7;1;0,18;10;22
+F069;Alas de pollo con costillar;100;Pollo, ala con piel, cruda;1143,933;214;17,5;0,1;16;12;1,3;0,9;19;132;0;0,05;0,09;5,9;5;0,31;44;73
+F077;Pollo entero congelado sin vísceras;100;Pollo, entero con piel, crudo;1664,489;167;18,1;0,4;10,3;12;1,5;0,7;24;200;2;0,08;0,16;6,6;5;0,34;16;70
+F085;Pechuga de pollo;100;Pollo, pechuga con piel, cruda;1353,564;166;20,7;0,1;9,2;11;0,8;0,7;25;174;0;0,07;0,09;9,9;4;0,34;24;63
+F091;Piernas de pollo;100;Pollo, pierna o colombina con piel, cruda;1202,175;182;18,1;0,1;12,1;10;1,8;1;21;149;3;0,07;0,16;5,3;6;0,56;30;79
+F095;Carne de res, cadera;100;Res, cadera, frita, sin sal;3012,5;176;28,7;0,5;6,6;10;5,2;3;31;245;0;0,07;0,26;5,9;5;2;1;78
+F107;Carne de res, costilla;100;Res, costilla, cruda;2313,656;287;17,1;2,3;23,3;9;3,5;1,6;16;176;0;0,1;0,18;4,1;5;2,34;5;60
+F123;Carne de res, sobrebarriga;100;Res, sobrebarriga, cocida, sin sal;2425,6;331;24,2;0;26;21;6,5;2,1;21;161;0;0,04;0,12;1,6;8;1,56;0;39
+G008;Leche en polvo;100;Leche de vaca, entera, en polvo;3498,3;499;26,3;38,4;26,6;940;3,3;0,5;85;776;9;0,26;1,42;0,6;37;3,25;288;369
+G012;Leche pasteurizada;100;Leche de vaca, entera, líquida, pasteurizada;344,218887908208;55;3,2;3,4;3,2;120;0,4;0;10;95;0;0,04;0,18;0,1;5;0,45;39;42
+G016;Queso cuajada;100;Queso fresco, semiblando, semimagro, tipo cuajada;1235;207;15,2;2;15,4;490;0,5;1,5;16;270;0;0,02;0,46;0,8;5;0,3;192;64
+G017;Queso campesino;100;Queso fresco, semiduro, semigraso, tipo campesino;1579,4;301;17,5;0,3;25,5;586;2,9;0,4;21;335;0;0,03;0,32;0,2;5;0,3;420;935
+G018;Queso costeño;100;Queso fresco, semiduro, semigraso, tipo costeño;1604,2;303;17,5;0,9;25,5;783;0,5;1,3;30;375;0;0,03;0,37;0,2;5;0,3;420;935
+J003;Huevo rojo A;100;Huevo de gallina, entero, cocido, sin sal;984;145;13;0;10,4;49;0,9;1,6;13;184;0;0,07;0,37;0,1;51;1,15;176;143
+K003;Azúcar sulfitada;100;Azúcar blanco, granulado;381,7;397;0;99,3;0;0;0;0,1;1;0;0;0;0;0;0;0;0;0
+K004;Azúcar morena;100;Azúcar morena, granulado;390,7;390;0;97,5;0;85;0,2;1,9;24;22;0;0,01;0,01;0,1;1;0;0;39
+K018;Gelatina;100;Gelatina con azúcar, en polvo;2829,9;392;8,3;89,8;0;0;0;0;2;0;0;0;0;0;0;0;0;268
+K033;Panela redonda morena;100;Panela;449,7;364;0,6;90,2;0,1;42;1,4;4,9;47;39;0;0,02;0,11;0,3;1;0;0;39
+L005;Café instantáneo;100;Café soluble, en polvo;14833,3;355;13;74,7;0,4;141;0,4;4,4;326;303;0;0,01;0,08;28,2;1;0;0;38
+L006;Café molido;100;Café, tostado y molido, en polvo;2551,7;479;14,2;67,5;12,3;130;0,5;5,8;165;223;0;0,07;0,1;31,6;3;0;0;1
+L008;Chocolate amargo;100;Chocolate amargo o negro;2713,3;622;4,9;49,3;42,6;80;2,9;3,6;186;220;0;0,04;0,04;1,1;6;0,28;2;17
+L017;Salsa de tomate doy pack;100;Salsa de tomate;1263,9;109;1,3;25;0,3;17;0,1;0,5;17;28;3;0,04;0,09;1,2;10;0;70;860
+T003;Arveja verde seca importada;100;Arveja seca, cruda;389,3;374;23,9;60,2;1,1;60;3,5;4,6;119;346;2;0,78;0,16;3,1;274;0;22;15
+T026;Lenteja importada;100;Lenteja común, cruda;631,3;387;23,1;61;0,9;51;3,6;7,2;83;370;3;0,5;0,18;1,8;172;0;2;27
