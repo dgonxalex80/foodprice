@@ -1,4 +1,6 @@
 # 20-procesamiento-resultados-modelo1.R
+library(here)
+source(here::here("R","10-Cargar-librerias.R"))
 
 # solucion optima
 opt_sol = lp(direction = "min",
@@ -10,14 +12,12 @@ opt_sol = lp(direction = "min",
 
 
 # Descripcion de la solucion
-print(opt_sol$objval)   # valor optimo de la funcion objetivo
+ print(opt_sol$objval)   # valor optimo de la funcion objetivo
 
 
 
-print(opt_sol$solution) # valores de las variables de eleccion
+# print(opt_sol$solution) # valores de las variables de eleccion
 
-# solucion1 <- cbind(alimentos,opt_sol$solution)
-solucion1
-
-
-print(opt_sol$duals)  
+solucion1 <- cbind(alimentos,opt_sol$solution)
+ solucion1
+ print(opt_sol$duals)  
